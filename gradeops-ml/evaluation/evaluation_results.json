@@ -1,0 +1,15 @@
+{
+  "timestamp": "2026-04-20T22:06:24.318387",
+  "dataset_size": 10,
+  "metrics": {
+    "mae": 3.9,
+    "accuracy_exact": 20.0,
+    "accuracy_1mark": 40.0,
+    "accuracy_2marks": 50.0,
+    "avg_latency_seconds": 7.99,
+    "throughput_per_minute": 7.5,
+    "consistency_score": 100.0,
+    "ocr_wer": 0.0,
+    "failed_samples": 0
+  }
+}

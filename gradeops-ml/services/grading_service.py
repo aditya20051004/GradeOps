@@ -116,6 +116,8 @@ Only respond with JSON, nothing else.
 # Each node is one step in our pipeline
 # ─────────────────────────────────────────
 
+
+
 # Node 1: Extract answers from student response
 def extract_answers_node(state: GradingState):
     print("📝 Step 1: Extracting answers...")
@@ -228,6 +230,69 @@ print("🔧 Building Langgraph grading pipeline...")
 grading_pipeline = build_grading_pipeline()
 print("✅ Grading pipeline ready!")
 
+
+# Threshold-based marking using embeddings
+def threshold_based_score(
+    student_answer: str,
+    rubric: str,
+    total_marks: int
+) -> dict:
+    try:
+        from sentence_transformers import SentenceTransformer
+        import numpy as np
+        
+        print("🧮 Running threshold-based scoring...")
+        
+        # Load model
+        model = SentenceTransformer('all-MiniLM-L6-v2')
+        
+        # Get embeddings
+        student_embedding = model.encode([student_answer])[0]
+        rubric_embedding = model.encode([rubric])[0]
+        
+        # Cosine similarity
+        similarity = np.dot(
+            student_embedding, 
+            rubric_embedding
+        ) / (
+            np.linalg.norm(student_embedding) * 
+            np.linalg.norm(rubric_embedding)
+        )
+        
+        # Threshold-based marking
+        if similarity >= 0.85:
+            score = total_marks          # Full marks
+            level = "Excellent"
+        elif similarity >= 0.70:
+            score = int(total_marks * 0.8)  # 80%
+            level = "Good"
+        elif similarity >= 0.60:
+            score = int(total_marks * 0.6)  # 60%
+            level = "Partial"
+        elif similarity >= 0.40:
+            score = int(total_marks * 0.4)  # 40%
+            level = "Below Average"
+        else:
+            score = int(total_marks * 0.2)  # 20%
+            level = "Poor"
+        
+        print(f"✅ Similarity: {similarity:.2f} → Score: {score}/{total_marks}")
+        
+        return {
+            "score": score,
+            "similarity": round(float(similarity), 3),
+            "level": level,
+            "method": "threshold_embedding"
+        }
+        
+    except Exception as e:
+        print(f"Threshold scoring error: {e}")
+        return {
+            "score": 0,
+            "similarity": 0,
+            "level": "Error",
+            "method": "failed"
+        }
 # ─────────────────────────────────────────
 # REQUEST/RESPONSE MODELS
 # ─────────────────────────────────────────

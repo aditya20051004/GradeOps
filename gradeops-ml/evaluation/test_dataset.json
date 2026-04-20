@@ -1,0 +1,80 @@
+{
+  "dataset_info": {
+    "name": "GradeOps Evaluation Dataset v3",
+    "total_samples": 10,
+    "exam": "Data Structures CS301",
+    "total_marks": 50
+  },
+  "samples": [
+    {
+      "id": 1,
+      "student_answer": "Arrays store elements in contiguous memory locations. They provide O(1) random access using index. Fixed size is a limitation. Space complexity O(n).",
+      "rubric": "Q1: Arrays 10 marks. Q2: Linked Lists 10 marks. Q3: QuickSort 15 marks. Q4: Binary Trees 15 marks. Award marks for correct explanations.",
+      "ground_truth_marks": 13,
+      "total_marks": 50
+    },
+    {
+      "id": 2,
+      "student_answer": "Arrays use index to access elements. Linked list has nodes. Sorting algorithms exist. Trees have children.",
+      "rubric": "Q1: Arrays 10 marks. Q2: Linked Lists 10 marks. Q3: QuickSort 15 marks. Q4: Binary Trees 15 marks. Award marks for correct explanations.",
+      "ground_truth_marks": 8,
+      "total_marks": 50
+    },
+    {
+      "id": 3,
+      "student_answer": "Arrays are linear data structures storing elements in contiguous memory. O(1) access time using index. Advantages: fast access, cache friendly. Disadvantages: fixed size, insertion O(n). Linked lists use nodes with pointers dynamic size O(n) access O(1) insertion. QuickSort average O(n log n) worst O(n squared) uses pivot. Binary trees BST property left smaller right larger O(log n) search inorder traversal sorted.",
+      "rubric": "Q1: Arrays 10 marks. Q2: Linked Lists 10 marks. Q3: QuickSort 15 marks. Q4: Binary Trees 15 marks. Award marks for correct explanations.",
+      "ground_truth_marks": 27,
+      "total_marks": 50
+    },
+    {
+      "id": 4,
+      "student_answer": "Linked lists have nodes with data and pointer to next node. Dynamic size unlike arrays. Insertion deletion O(1). Search O(n). QuickSort uses divide conquer average O(n log n). Binary tree nodes have at most 2 children BST allows fast search O(log n).",
+      "rubric": "Q1: Arrays 10 marks. Q2: Linked Lists 10 marks. Q3: QuickSort 15 marks. Q4: Binary Trees 15 marks. Award marks for correct explanations.",
+      "ground_truth_marks": 36,
+      "total_marks": 50
+    },
+    {
+      "id": 5,
+      "student_answer": "Arrays store data. Linked list is a list that is linked together. QuickSort sorts quickly. Binary tree is a tree with two children.",
+      "rubric": "Q1: Arrays 10 marks. Q2: Linked Lists 10 marks. Q3: QuickSort 15 marks. Q4: Binary Trees 15 marks. Award marks for correct explanations.",
+      "ground_truth_marks": 15,
+      "total_marks": 50
+    },
+    {
+      "id": 6,
+      "student_answer": "Arrays contiguous memory O(1) access fixed size. Linked lists dynamic nodes pointers O(1) insert O(n) search. QuickSort picks pivot and partitions array average O(n log n) worst case O(n squared) when pivot always min or max. Binary trees BST property O(log n) search insertion deletion inorder gives sorted output.",
+      "rubric": "Q1: Arrays 10 marks. Q2: Linked Lists 10 marks. Q3: QuickSort 15 marks. Q4: Binary Trees 15 marks. Award marks for correct explanations.",
+      "ground_truth_marks": 30,
+      "total_marks": 50
+    },
+    {
+      "id": 7,
+      "student_answer": "QuickSort is fast sorting algorithm with O(n log n) complexity. Arrays store elements. Trees have nodes.",
+      "rubric": "Q1: Arrays 10 marks. Q2: Linked Lists 10 marks. Q3: QuickSort 15 marks. Q4: Binary Trees 15 marks. Award marks for correct explanations.",
+      "ground_truth_marks": 20,
+      "total_marks": 50
+    },
+    {
+      "id": 8,
+      "student_answer": "Arrays store elements contiguous memory O(1) access fixed size disadvantage. Linked lists nodes with data next pointer dynamic size advantage. QuickSort divide conquer O(n log n) average O(n squared) worst case randomized pivot avoids worst. Binary trees BST left smaller right larger O(log n) operations inorder traversal sorted sequence worst case skewed O(n).",
+      "rubric": "Q1: Arrays 10 marks. Q2: Linked Lists 10 marks. Q3: QuickSort 15 marks. Q4: Binary Trees 15 marks. Award marks for correct explanations.",
+      "ground_truth_marks": 36,
+      "total_marks": 50
+    },
+    {
+      "id": 9,
+      "student_answer": "Binary tree has two children left and right. Arrays store data in memory. Sorting is important in computer science.",
+      "rubric": "Q1: Arrays 10 marks. Q2: Linked Lists 10 marks. Q3: QuickSort 15 marks. Q4: Binary Trees 15 marks. Award marks for correct explanations.",
+      "ground_truth_marks": 16,
+      "total_marks": 50
+    },
+    {
+      "id": 10,
+      "student_answer": "Arrays contiguous memory O(1) access. Linked lists dynamic nodes pointers. QuickSort pivot partition average O(n log n) worst O(n squared). Binary trees BST property O(log n) search. Inorder traversal gives sorted sequence. Worst case skewed tree O(n).",
+      "rubric": "Q1: Arrays 10 marks. Q2: Linked Lists 10 marks. Q3: QuickSort 15 marks. Q4: Binary Trees 15 marks. Award marks for correct explanations.",
+      "ground_truth_marks": 35,
+      "total_marks": 50
+    }
+  ]
+}

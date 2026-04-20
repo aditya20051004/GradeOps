@@ -1,4 +1,17 @@
+#PLS Paste this  in Google collab note book one by one section and make sure to on your TPU ,after creating a new notebook
+
+!!!!!!!!!!!!
+!!!!!!!!
+!!!!!!!!!!!
+
+
+
 #install the necessary requirements
+!pip install transformers torch torchvision
+!pip install qwen-vl-utils
+!pip install flask pyngrok
+!pip install Pillow pymupdf
+!pip install nougat-ocr
 
 
 #loading of models

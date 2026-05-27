@@ -3,6 +3,10 @@
 An intelligent Human-in-the-Loop (HITL) grading pipeline 
 that uses Vision-Language Models and Agentic LLMs to 
 evaluate scanned exams against strict rubrics.
+![img](https://github.com/aditya20051004/GradeOps/blob/main/img122/img12.png)
+![img](https://github.com/aditya20051004/GradeOps/blob/main/img122/img13.png)
+![img](https://github.com/aditya20051004/GradeOps/blob/main/img122/img14.png)
+
 
 ## 🚀 Tech Stack
 
